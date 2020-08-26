@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <p id="para">This is going to be changed</p>
+    <h1 id ="concat"></h1>
+<script>
+  let x = "Hello World";
+  alert(x);
+  //Here you are overwriting the variables value 
+  x = "Goodbye World";
+  alert(x);
+/*Here we created a variable and assigned a document in which we can call
+anything on variable name. This is very helpful so you want have to write document.getElementById
+everytime you want to change something to it.*/
+  const para = document.getElementById('para');
+  para.innerHTML = "I have changed Hooray!";
+  para.style.color = "pink";
+//Here we are using concatentaion. 
+  var firstWord = "Hello";
+  var secondWord = "Handsome";
+  
+  var heading= document.getElementById('concat');
+  concat.innerHTML = firstWord + " " + secondWord;
+  concat.style.backgroundColor = "grey";
+  concat.style.color = "white";
+</script>
+  </body>
+</html>
