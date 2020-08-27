@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <p id="para1">This is Paragraph 1</p>
+        <p id="para2">This is Paragraph 2</p>
+        <p id="para3">This is Paragraph 3</p>
+        <p id="para4">This is Paragraph 4</p>
+        <p id="para5">This is Paragraph 5</p>
+        <h1 id ="sortme">This is using sort method</h1>
+        <script>
+            //A way to put multiple values in a variable is by using an array.
+                       //When making arrays you are allocating it in the memory in a sequential order as suppose to random when decalring variables.  
+            var genres = ['pop', 'rock', 'country', 'reggaeton'];
+            document.getElementById('para1').innerHTML = genres[0];  
+            document.getElementById('para2').innerHTML = genres[1]; 
+            document.getElementById('para3').innerHTML = genres[2];  
+            document.getElementById('para4').innerHTML = genres[3];  
+            //Another way 
+            var candies = [];
+            candies[0] = "skittles";
+            candies[1] = "starburst";
+            candies[2] = "jolly rancher";
+           document.getElementById('para5').innerHTML = candies; 
+           //Using the sort method in which orders the elements inside array in order.
+           // remember that the sort method has number as first priority, uppercase as second, and lowercase as last.
+           //You can use the push method in order to append an element inside the array. 
+           //Keep in mind when appending a new element it has to go below the array.
+           var fruits = ["mango", "grapes", "watermelon", "apple", "orange"];
+           fruits.push("cherry");
+           fruits.push("strawberry");
+           document.getElementById('sortme').innerHTML = fruits.sort();
+
+
+            </script>
+    </body>
+</html>
