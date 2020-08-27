@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #div1 {
+                background-color: purple;
+                width: 100px;
+                height: 100px;
+            }
+            #div2 {
+                width: 100px;
+                height: 400px;
+                background-color: teal;
+                overflow-y: scroll;
+            }
+
+            #div3 {
+                width: 100px;
+                height: 100px;
+                background-color: black;
+            }
+
+        </style>
+    </head>
+
+    <body>
+       <!-- here we created a onclick event as a attribute on a button that calls myFirstFunc 
+        function. You can use this event on any element that exists. Keep in mind that when used as an attr you need the () -->
+        <button id="btn" onclick="myFirstFunc()">Click</button>
+        <button id="btn2" >Click2</button>
+        <!-- Here you are using on double click attribute -->
+        <button id="btn2" ondblclick="myFirstFunc()">DoubleClick</button>
+        <br><br>
+        <h1>This is using onmouseover and onmouseout</h1>
+        <div id="div1" onmouseover="squareBig()" onmouseout="squareSmall()"></div>
+        <br><br>
+        <h2>Here we added an onerror attribbute in which will show alert only when there is an error to loading the image</h2>
+        <img src="https://images.unsplash.com/photo-1559529606-f8a35ed84683?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" onerror="imageError()">
+        <br><br>
+        <!-- Here we are using the onscroll event on the div element. -->
+        <p id= "demo">The text will change once you scroll</p>
+        <div id="div2" onscroll="scrollFunc()">
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+            Hello hello ello llo lo o
+        </div>
+        <br> <br>
+        <!--If you click on square color will change to olive-->
+        <div id="div3" onclick="changeColor('olive')"></div>
+        <br>
+        <button onclick="changeColor('red')">Red</button>
+        <button onclick="changeColor('blue')">Blue</button>
+        
+        <br> <br>
+        <!--Here it will execute the function sum and show you the solution.-->
+        <p id="sum">Sum</p>
+        <p id="subtract">Subtract</p>
+        
+        <script>
+            // another way you can create an onclick event on a btn is by using doc. Keep in mind when doing so you dont need ().
+            document.getElementById("btn2").onclick = myFirstFunc;
+            //Here you created your first function
+            function myFirstFunc() {
+                alert('I was created');
+            }
+            //Here you are deploying your function
+            // myFirstFunc();
+        
+
+            //onmouseover
+            function squareBig() {
+                document.getElementById('div1').style.height = "200px";
+                document.getElementById('div1').style.width = "200px";
+            }
+            //onmouseout
+            function squareSmall() {
+                document.getElementById('div1').style.height = "100px";
+                document.getElementById('div1').style.width = "100px";
+            }
+            //onerror
+            function imageError() {
+                alert('Oh No! Failed to load');
+            }
+            //onscroll 
+            var x = 0;
+            function scrollFunc() {
+                x+=1;
+                //IF U ADD THE + NEXT TO = IT WILL APPEND THE TEXT EVERYTIME U SCROLL AND UR TEXT WILL GROW AND WILL NEVER END.
+                document.getElementById('demo').innerHTML = "You have scrolled " + x + " times.";
+            }
+            //function params and arguments
+            //The color param is basically a variable you fill when you deploy the function in which u did in the buttons above.
+            function changeColor(color) {
+                document.getElementById('div3').style.backgroundColor = color;
+            }
+
+            //return function 
+            document.getElementById('sum').innerHTML = sum(20, 5);
+            function sum(x, y) {
+                var total = x + y ;
+                // If we don't include return you will get undefined. Keep in mind that return can return anything you want.
+                return total;
+            }
+            document.getElementById('subtract').innerHTML ="You have " + yearsToRetire(25) + " years to retire";
+        function yearsToRetire(age) {
+            var yearsLeft = 65 - age;
+            return yearsLeft;
+        }
+        </script>
+    </body>
+</html>
