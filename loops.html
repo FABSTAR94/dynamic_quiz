@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+    <body>
+        <p id="wloop"></p>
+        <p id="wloop2"></p>
+        <p id="dwloop"></p>
+        <p id="floop"></p>
+        <script>
+            //Checks condition then runs the code.
+            var f = 0;
+            while (f < 10) {
+                //you do += if u want it to print out 10 times.
+                document.getElementById('wloop').innerHTML += "10 times while <br>";
+                //Thi is same as f++.
+                f = f + 1;
+            }
+
+
+            var c = 0;
+            while (c < 10) {
+                document.getElementById('wloop2').innerHTML += c;
+                //This means the same as c = c + 1.
+                c ++;
+            }
+
+            //do while loop runs the code first then checks the condition. This one will always run the loop at least once. 
+            var g = 0;
+
+            do {
+                document.getElementById('dwloop').innerHTML += g + "do <br>";
+                g++;
+            } while(g < 10)
+
+            // The for loop works the same as the while loop.
+            // for loop is the most common used loop because you can put all 3 things: variable, condition, and addition inside ().
+            for (var fcg = 0; fcg < 10; fcg++) {
+                //The continue keyword is used to skip something and continue after that
+                //If you choose break keyword it will break right there and not continue.
+                //One key to note is that it acts differently if the if stmt put at the bottom of the document.getElementById.
+                if(fcg == 5) {
+                    continue
+                    // break
+                    }
+                document.getElementById('floop').innerHTML += fcg + "for <br>";
+            }
+
+        </script>
+    </body>
+</html>
