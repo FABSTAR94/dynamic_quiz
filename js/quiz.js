@@ -63,5 +63,18 @@ if (answer5.checked == true) {
 
  document.getElementById("score").innerHTML = "Score:" +" "+ add;
 
+ /* formula for finding percentage is how many questions you got right by the add 
+ variable multiplied by 100 nd divided by total number of questions.*/
+ var percentage = add * 100 / 5;
+ document.getElementById('percentage').innerHTML = percentage + "%";
+ document.getElementById('percentage').style.color = "green"; 
+ if (percentage < 50 ) {
+    document.getElementById('percentage').style.color = "red";
+ } 
+
+ if (percentage == 100) {
+     document.getElementById('percentage').innerHTML = percentage + "%  Great Job!";
+ }
+
 }
 

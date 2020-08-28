@@ -12,6 +12,7 @@ html, body {
     padding: 10px;
     /* we add the box-sizing property so the div stay the same. it says to include the padding and border inside the total width */
     box-sizing: border-box;
+    font-size: 18px;
 }
 
 
