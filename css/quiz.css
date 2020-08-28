@@ -1,0 +1,26 @@
+
+html, body {
+    height: 100%;
+    background-color: teal;
+}
+
+#left, #right {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    /* we add the box-sizing property so the div stay the same. it says to include the padding and border inside the total width */
+    box-sizing: border-box;
+}
+
+
+#left {
+    position: absolute;
+    left: 5%;
+}
+
+#right {
+    position: absolute;
+    right: 5%;
+}
